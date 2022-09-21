@@ -1,0 +1,93 @@
+.Signup__login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 99vh;
+}
+
+.Signup__login-container {
+  background: rgba(168, 194, 186, 0.75);
+  width: 400px;
+  padding: 30px 40px;
+  color: rgb(32, 81, 160);
+  border-radius: 12px;
+}
+
+.Signup__heading {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.Signup__login-form {
+}
+
+.Signup__input-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.Signup__input-container label {
+  margin: 20px 0px 10px;
+}
+
+.Signup__input-container input {
+  padding: 7px 15px;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  border-color: rgb(72, 71, 71);
+  background: transparent;
+  color: black;
+  outline: none;
+}
+
+.Signup__input-container input::placeholder {
+  color: rgb(71, 69, 69);
+}
+
+.Signup__button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Signup__button-box button {
+  padding: 11px 35px;
+  font-size: 1rem;
+  margin-top: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 10px;
+  border: 0px;
+  cursor: pointer;
+}
+
+.Signup__button-box button:hover {
+  background-color: rgb(214, 208, 208);
+}
+
+.Signup__signup-portion {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.Signup__signup-text {
+  margin-right: 10px;
+  font-size: 0.9rem;
+  color: rgb(232, 230, 230);
+}
+
+.Signup__signup {
+  color: rgb(7, 76, 212);
+  cursor: pointer;
+}
+
+.Signup__signup:hover {
+  color: rgb(179, 63, 34);
+}

@@ -1,0 +1,118 @@
+.home__container {
+  padding: 30px 50px;
+  /* width: 100vw; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__buttons > button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background: rgb(1, 224, 1);
+  border-radius: 5px;
+  border: 2px solid rgb(1, 224, 1);
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.home__newCustomer {
+  margin: 0 20px;
+}
+
+.home__newCustomer:hover {
+  background: #ffffff;
+}
+
+.home__newCustomer:active {
+  background: rgb(1, 224, 1);
+}
+
+.home__existingCustomer {
+  margin: 0 20px;
+  background: #ffffff !important;
+}
+
+.home__existingCustomer:hover {
+  background: rgb(1, 224, 1) !important;
+}
+
+.home__existingCustomer:active {
+  background: #ffffff !important;
+}
+
+.newCustomerForm {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.newCustomerForm__heading {
+  font-size: 45px;
+  /* text-align: center; */
+  padding-bottom: 15px;
+}
+
+.newCustomerForm__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 auto;
+  font-size: 20px;
+}
+
+.newCustomerForm__formItem {
+  margin: 5px 0;
+  width: 100%;
+}
+
+.newCustomerForm__formItem > div > input {
+  padding: 5px 10px;
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 300px;
+}
+
+.newCustomerForm__formItem > div > input[type="checkbox"] {
+  width: auto;
+}
+
+.newCustomerForm__productsList > label {
+  font-size: 18px;
+}
+
+.newCustomerForm__occupationsList {
+  padding: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.newCustomerForm__submit > button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background: rgb(1, 224, 1);
+  border-radius: 5px;
+  border: 2px solid rgb(1, 224, 1);
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.newCustomerForm__submit > button:hover {
+  background: #ffffff;
+}
+
+.newCustomerForm__submit > button:active {
+  background: rgb(1, 224, 1);
+}
