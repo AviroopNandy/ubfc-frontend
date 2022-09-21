@@ -1,13 +1,14 @@
 .home__container {
   padding: 30px 50px;
   /* width: 100vw; */
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .home__buttons {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,9 +50,14 @@
   background: #ffffff !important;
 }
 
-.newCustomerForm {
-  margin-top: 30px;
+.home__customerForm {
   width: 100%;
+}
+
+.newCustomerForm {
+  margin-top: 5px;
+  /* width: 100%; */
+  /* background: blue; */
 }
 
 .newCustomerForm__heading {
@@ -61,17 +67,21 @@
 }
 
 .newCustomerForm__form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 auto;
   font-size: 20px;
+  width: 100%;
+}
+
+.newCustomerForm__form > form > fieldset {
+  margin-bottom: 30px;
 }
 
 .newCustomerForm__formItem {
-  margin: 5px 0;
-  width: 100%;
+  margin-bottom: 5px;
+}
+
+.newCustomerForm__formItem > div > label {
+  font-size: 16px;
+  /* line-height: 18px !important; */
 }
 
 .newCustomerForm__formItem > div > input {
@@ -88,7 +98,7 @@
 }
 
 .newCustomerForm__productsList > label {
-  font-size: 18px;
+  font-size: 18px !important;
 }
 
 .newCustomerForm__occupationsList {
@@ -98,7 +108,6 @@
 }
 
 .newCustomerForm__submit > button {
-  margin-top: 15px;
   padding: 10px 20px;
   font-size: 14px;
   background: rgb(1, 224, 1);
@@ -115,4 +124,11 @@
 
 .newCustomerForm__submit > button:active {
   background: rgb(1, 224, 1);
+}
+
+@media screen and (max-width: 576px) {
+  .newCustomerForm__heading {
+    font-size: 30px;
+    padding-top: 10px;
+  }
 }
