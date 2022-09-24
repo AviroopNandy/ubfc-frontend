@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 
 const NewCustomerForm = () => {
@@ -14,7 +15,10 @@ const NewCustomerForm = () => {
     occupation: "Dairy Farm",
     occupationExtra: "",
     dependentsCount: "",
+    applicantAadhar: "",
   });
+
+  const [applicantAadhar, setApplicantAadhar] = useState();
 
   const modifyProductsList = (product) => {
     if (product === "vehicleInsurance") {
@@ -82,7 +86,22 @@ const NewCustomerForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(newCustomerDetails);
+    const formData = new FormData();
+    formData.append("file", applicantAadhar);
+    formData.append("upload_preset", "ixwl2u6l");
+    axios
+      .post("https://api.cloudinary.com/v1_1/dxq2unude/image/upload", formData)
+      .then((response) => {
+        console.log(response);
+        console.log(response.data.url);
+        setNewCustomerDetails({
+          ...newCustomerDetails,
+          applicantAadhar: response.data.url,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -238,7 +257,11 @@ const NewCustomerForm = () => {
                 <label>Please upload Aadhar Card Image</label>
               </div>
               <div>
-                <input type="file" accept="image/*" />
+                <input
+                  type="file"
+                  onChange={(e) => setApplicantAadhar(e.target.files[0])}
+                  accept="image/*"
+                />
               </div>
             </div>
             <div className="newCustomerForm__formItem">
