@@ -1,7 +1,38 @@
 import "./styles.css";
 import Input from "./input";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import authApi from "../../api/auth/authApi";
 
 export default function Login(props) {
+  const navigate = useNavigate();
+
+  const [userid, setUserid] = useState("");
+  const [pass, setPass] = useState("");
+  
+  function handleLogin(e){
+    e.preventDefault();
+    let userData = {
+      "userid": userid,
+      "password": pass,
+    };
+
+    authApi.login(userData).then((res)=>{
+      console.log(res);
+    }).catch((err)=>{
+      console.log(err);
+    })
+
+
+    console.log("\nSuccessfully Logged in");
+    setUserid("");
+    setPass("");
+
+    // props.onLogin();
+    navigate("/home");
+  }
+
+
   return (
     <>
       <div className="Login__login-page">
@@ -14,18 +45,18 @@ export default function Login(props) {
                 id="user-id"
                 type="text"
                 placeholder="Enter user id"
-                name="userid"
+                name="userid" value={userid} onChange={(e)=>{setUserid(e.target.value)}}
               />
               <Input
                 label="Password"
                 id="password"
                 type="password"
                 placeholder="Enter password"
-                name="password"
+                name="password" value={pass} onChange={(e)=>{setPass(e.target.value)}}
               />
             </div>
             <div className="Login__button-box">
-              <button>Login</button>
+              <button onClick={handleLogin}>Login</button>
             </div>
             <div className="Login__signup-portion">
               <span className="Login__signup-text">Don't have an account?</span>

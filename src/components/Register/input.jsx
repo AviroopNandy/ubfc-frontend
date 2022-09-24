@@ -1,6 +1,8 @@
 import "./styles.css";
 
+
 export default function Input(props) {
+  
   return (
     <div className="Login__input-container">
       <label htmlFor={props.id}>{props.label}</label>
@@ -10,6 +12,8 @@ export default function Input(props) {
         placeholder={props.placeholder}
         name={props.name}
         required
+        value={props.value}
+        onChange={props.onChange}
       />
     </div>
   );
