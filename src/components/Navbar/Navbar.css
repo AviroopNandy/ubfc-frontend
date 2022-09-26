@@ -1,0 +1,22 @@
+.Navbar__nav-container{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Navbar__nav-left{
+    list-style: none;
+}
+.Navbar__nav-right{
+    display: flex;
+    list-style: none;
+}
+.Navbar__nav-container li{
+    color: white;
+    margin: 0px 25px;
+    cursor: pointer;
+}
+.Navbar__nav-left li{
+    font-size: 1.1rem;
+}

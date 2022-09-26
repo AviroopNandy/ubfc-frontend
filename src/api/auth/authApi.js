@@ -6,7 +6,7 @@
 import axios from "axios";
 
 class ApiAuth {
-  backendURL = "http://localhost:3000";
+  backendURL = "http://localhost:5000";
   login;
   register;
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ExistingCustomerForm from "./ExistingCustomerForm";
 import NewCustomerForm from "./NewCustomerForm";
+import Navbar from "./../Navbar/Navbar";
 
 import "./styles.css";
 
@@ -14,6 +15,7 @@ const Home = () => {
 
   return (
     <>
+      <Navbar/>
       <div className="home__container">
         <div className="home__buttons">
           <button
